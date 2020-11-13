@@ -9,7 +9,7 @@ import dynamicImportTransform from './build/vite/plugin/dynamicImport/index';
 
 import { isDevFn, loadEnv } from './build/utils';
 
-import { createRollupPlugin, createVitePlugins } from './build/vite/plugin';
+import { createRollupPlugin, createVitePlugins } from './build/vite/plugin/index';
 
 const pkg = require('./package.json');
 
