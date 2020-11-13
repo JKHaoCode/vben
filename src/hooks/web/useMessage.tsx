@@ -118,7 +118,7 @@ notification.config({
 export function useMessage() {
   return {
     createMessage: Message as MessageApi,
-    notification: notification as (arg: ArgsProps) => void,
+    notification: notification as { [key: string]: (arg: ArgsProps) => void },
     createConfirm: createConfirm,
     createSuccessModal,
     createErrorModal,
