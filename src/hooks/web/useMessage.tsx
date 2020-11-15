@@ -112,13 +112,17 @@ notification.config({
   placement: 'topRight',
   duration: 3,
 });
+
+interface NotificationType {
+  [key: string]: (arg: ArgsProps) => void;
+}
 /**
  * @description: message
  */
 export function useMessage() {
   return {
     createMessage: Message as MessageApi,
-    notification: notification as { [key: string]: (arg: ArgsProps) => void },
+    notification: notification as NotificationType,
     createConfirm: createConfirm,
     createSuccessModal,
     createErrorModal,
